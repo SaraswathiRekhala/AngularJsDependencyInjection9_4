@@ -1,0 +1,18 @@
+<wm-page data-ng-controller="WatchPageController" pagetitle="Watch" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-composite name="composite1">
+                <wm-label class="col-md-3 control-label" name="label1" caption="Watch Triggers"></wm-label>
+                <wm-container class="col-md-9" name="container1">
+                    <wm-text name="text1" updateon="blur" scopedatavalue="textVal"></wm-text>
+                </wm-container>
+            </wm-composite>
+            <!--<div ng-controller="watchCtrl"></div>-->
+            <wm-label padding="unset 0.5em" name="label2" caption="No. of Times $watch() Function Fired: {{count}}"></wm-label>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

@@ -1,0 +1,13 @@
+<wm-page data-ng-controller="ApplyPageController" pagetitle="Apply" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-button class="btn-default" caption="Click" type="button" margin="unset 0.5em" name="button1" on-click="button1Click($event, $scope)"></wm-button>
+            <wm-button class="btn-default" caption="Click to $apply()" type="button" margin="unset 0.5em" name="button2" on-click="button2Click($event, $scope)"></wm-button>
+            <wm-label padding="unset 0.5em" name="label1" caption="Current Date Time: {{currentDateTime | date:'yyyy-MM-dd HH:mm:ss'}}"></wm-label>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

@@ -1,0 +1,13 @@
+<wm-page data-ng-controller="LocationPageController" pagetitle="Location" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-label padding="unset 0.5em" name="label1"></wm-label>
+            <wm-button class="btn-default" caption="Click Me" type="button" margin="unset 0.5em" name="button1" on-click="button1Click($event, $scope)"></wm-button>
+            <!--<div data-ng-controller="myUrl"></div>-->
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

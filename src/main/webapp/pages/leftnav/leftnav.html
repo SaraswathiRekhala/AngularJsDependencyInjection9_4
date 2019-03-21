@@ -1,16 +1,28 @@
 <wm-partial data-ng-controller="leftnavPageController" name="leftnav" type="leftnav">
     <wm-nav name="leftnavigation" type="pills" layout="stacked">
         <wm-nav-item name="list_dashboard">
-            <wm-anchor caption="Dashboard" name="dashboardLink" iconclass="wi wi-bar-graph"></wm-anchor>
+            <wm-anchor caption="$window" name="dashboardLink" iconclass="wi wi-bar-graph" on-click="Actions.goToPage_Main.invoke()"></wm-anchor>
         </wm-nav-item>
         <wm-nav-item name="list_order">
-            <wm-anchor caption="Pending Orders" name="orderLink" iconclass="wi wi-file"></wm-anchor>
+            <wm-anchor caption="$location" name="orderLink" iconclass="wi wi-file" on-click="Actions.goToPage_Location.invoke()"></wm-anchor>
         </wm-nav-item>
         <wm-nav-item name="list_inventory">
-            <wm-anchor caption="Inventory" name="inventoryLink" iconclass="wi wi-tag"></wm-anchor>
+            <wm-anchor caption="$watch" name="inventoryLink" iconclass="wi wi-tag" on-click="Actions.goToPage_Watch.invoke()"></wm-anchor>
         </wm-nav-item>
         <wm-nav-item name="list_support">
-            <wm-anchor caption="Support Calls" name="supportLink" iconclass="wi wi-envelope"></wm-anchor>
+            <wm-anchor caption="$filter" name="supportLink" iconclass="wi wi-envelope" on-click="Actions.goToPage_Filter.invoke()"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item5">
+            <wm-anchor name="anchor5" iconclass="wi wi-file" caption="$apply" on-click="Actions.goToPage_Apply.invoke()"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item6">
+            <wm-anchor name="anchor6" iconclass="wi wi-file" on-click="Actions.goToPage_Digest.invoke()" caption="$digest"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item7">
+            <wm-anchor name="anchor7" iconclass="wi wi-file" caption="$isolateScope" on-click="Actions.goToPage_IsolateScope.invoke()"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item8">
+            <wm-anchor name="anchor8" iconclass="wi wi-file" caption="Module" on-click="Actions.goToPage_Module.invoke()"></wm-anchor>
         </wm-nav-item>
     </wm-nav>
 </wm-partial>

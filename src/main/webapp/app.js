@@ -1,7 +1,7 @@
-Application.run(function ($rootScope) {
+Application.run(function($rootScope) {
     "use strict";
     /* perform any action on the variables within this block(on-page-load) */
-    $rootScope.onAppVariablesReady = function () {
+    $rootScope.onAppVariablesReady = function() {
         /*
          * variables can be accessed through '$rootScope.Variables' property here
          * e.g. $rootScope.Variables.staticVariable1.getData()
@@ -9,7 +9,7 @@ Application.run(function ($rootScope) {
     };
 
     /* perform any action on session timeout here, e.g clearing some data, etc */
-    $rootScope.onSessionTimeout = function () {
+    $rootScope.onSessionTimeout = function() {
         /*
          * NOTE:
          * On re-login after session timeout:
@@ -38,7 +38,40 @@ Application.run(function ($rootScope) {
      * xhrObj:      The xhrObject used to make the service call
      *              This object contains useful information like statusCode, url, request/response body.
      */
-    $rootScope.onServiceError = function (source, errorMsg, xhrObj) {
+    $rootScope.onServiceError = function(source, errorMsg, xhrObj) {
 
     };
+});
+
+
+Application.controller("myCtrl", function($scope) {
+    $scope.firstName = "Saraswathi";
+    $scope.lastName = "Rekhala";
+
+    console.log($scope.$parent.displayText);
+    $scope.$parent.displayText = "Hello $parent";
+});
+
+Application.service("service1", function() {
+    this.displayServiceFn = function() {
+        console.log('in service');
+    }
+});
+
+Application.factory("factory1", function() {
+    var factoryObj = {};
+    factoryObj.displayFactoryFn = function() {
+        console.log('in factory');
+    }
+    return factoryObj;
+})
+
+
+Application.constant('MY_CONSTANT1', 'The Constant Text');
+
+Application.filter('Demofilter', function() {
+    debugger
+    return function(input) {
+        return input.toUpperCase() + " Tutorial"
+    }
 });

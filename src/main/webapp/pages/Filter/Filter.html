@@ -1,0 +1,45 @@
+<wm-page data-ng-controller="FilterPageController" pagetitle="Filter" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                        <wm-label padding="unset 0.5em" name="label1" caption="FullDate: {{fullDate}}"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn2">
+                        <wm-label padding="unset 0.5em" name="label3" caption="LongDate: {{longDate}}"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn3">
+                        <wm-label padding="unset 0.5em" name="label2" caption="MediumDate: {{mediumDate}}"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn4">
+                        <wm-label padding="unset 0.5em" name="label4" caption="ShortDate: {{shortDate}}"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn5">
+                        <wm-label padding="unset 0.5em" name="label5" caption="DatePattern: {{datePattern}}"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn6">
+                        <wm-label padding="unset 0.5em" name="label6" caption="AnotherDate: {{anotherDate}}"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn7">
+                        <wm-label padding="unset 0.5em" name="label7" caption="UppercaseName: {{uppercaseName}}"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn8">
+                        <wm-label padding="unset 0.5em" name="label8" caption="LowercaseName: {{lowercaseName}}"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <div ng-controller="myCtrl">hello {{textValue|Demofilter}}</div>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

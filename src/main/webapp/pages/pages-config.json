@@ -1,6 +1,26 @@
 [ {
+  "name" : "Apply",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "Common",
   "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "Digest",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Filter",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "IsolateScope",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Location",
+  "type" : "PAGE",
   "params" : [ ]
 }, {
   "name" : "Login",
@@ -8,6 +28,22 @@
   "params" : [ ]
 }, {
   "name" : "Main",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Module",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "RootScope",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "RouteParams",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Watch",
   "type" : "PAGE",
   "params" : [ ]
 }, {
