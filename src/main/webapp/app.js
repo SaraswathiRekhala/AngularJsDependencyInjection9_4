@@ -43,7 +43,6 @@ Application.run(function($rootScope) {
     };
 });
 
-
 Application.controller("myCtrl", function($scope) {
     $scope.firstName = "Saraswathi";
     $scope.lastName = "Rekhala";
@@ -66,12 +65,12 @@ Application.factory("factory1", function() {
     return factoryObj;
 })
 
+Application.constant('MY_CONSTANT1', 'The Constant Text Value');
 
-Application.constant('MY_CONSTANT1', 'The Constant Text');
-
-Application.filter('Demofilter', function() {
-    debugger
-    return function(input) {
-        return input.toUpperCase() + " Tutorial"
-    }
+Application.directive('tutDirective', function() {
+    return {
+        template: 'Hello! Myself Custom Directive'
+    };
 });
+
+// var app = angular.module("angularapp", ["ngAnimate"]);

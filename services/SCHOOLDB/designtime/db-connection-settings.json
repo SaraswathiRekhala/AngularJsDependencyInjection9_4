@@ -1,0 +1,91 @@
+{
+  "username" : "db2inst1",
+  "password" : "7b6a43524a2429176262362e4c5c783a172653",
+  "url" : "jdbc:db2://54.67.89.150:50000/SCHOOLDB:progressiveStreaming=2;",
+  "driverClass" : "com.ibm.db2.jcc.DB2Driver",
+  "dialect" : "org.hibernate.dialect.DB2Dialect",
+  "serviceId" : "SCHOOLDB",
+  "packageName" : "com.angularjsdependencyinjection9_4.schooldb",
+  "dbType" : "DB2",
+  "host" : "54.67.89.150",
+  "dbName" : "SCHOOLDB",
+  "port" : "50000",
+  "schemaName" : "DB2INST1",
+  "tableFilter" : [ {
+    "table" : "ACADEMICS",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "ACADEMICSUBJECTS",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "ACADEMICTESTSUBJECTS",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "ACADEMICYEAR",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "ALLTYPES",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "DEFAULTVALUES",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "EMPLOYEEDETAILS",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "GRADEDETAILS",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "PERSONBACKUP",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "PERSONS",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "RESULTS",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "STANDARDDETAILS",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "STUDENTACADEMICS",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "STUDENTDETAILS",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "STUDENTIDENTIFICATION",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "SUBJECTDETAILS",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "TESTCONDUCTED",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "TESTDETAILS",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "USERLOGIN",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "VIEW_ALL_TYPES",
+    "schema" : "DB2INST1"
+  } ],
+  "schemaFilter" : [ "DB2INST1" ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "none",
+  "maxPageSize" : 100,
+  "minPoolSize" : 2,
+  "maxPoolSize" : 4,
+  "transactionTimeout" : 30,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null
+  },
+  "readOnly" : true
+}

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:component-scan base-package="com.angularjsdependencyinjection9_4.dbexportcheck.controller,com.angularjsdependencyinjection9_4.dbexportcheck.service,com.angularjsdependencyinjection9_4.dbexportcheck.dao"/>
+    <bean class="com.wavemaker.runtime.data.spring.WMPropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>
+                    classpath:DBExportCheck.properties
+                </value>
+            </list>
+        </property>
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+    </bean>
+
+    <bean id="DBExportCheckHikariConfig" class="com.zaxxer.hikari.HikariConfig">
+        <property name="jdbcUrl" value="${DBExportCheck.url}"/>
+        <property name="driverClassName" value="${DBExportCheck.driverClass}"/>
+        <property name="username" value="${DBExportCheck.username}"/>
+        <property name="password" value="${DBExportCheck.password}"/>
+        <property name="maximumPoolSize" value="${DBExportCheck.maxPoolSize}"/>
+        <property name="minimumIdle" value="${DBExportCheck.minPoolSize}"/>
+        <property name="connectionTimeout" value="30000" />
+        <property name="validationTimeout" value="5000" />
+        <property name="idleTimeout" value="600000" />
+        <property name="maxLifetime" value="1800000" />
+        <property name="initializationFailTimeout" value="-1" />
+        <property name="leakDetectionThreshold" value="120000" />
+        <property name="registerMbeans" value="false" />
+    </bean>
+
+    <bean id="DBExportCheckWMManagedDataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close" lazy-init="true">
+        <constructor-arg ref="DBExportCheckHikariConfig"/>
+    </bean>
+
+    <bean id="DBExportCheckEntityInterceptor" class="com.wavemaker.runtime.data.interceptors.WMEntityInterceptor"/>
+
+    <bean id="DBExportCheckSessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="DBExportCheckDataSource"/>
+        <property name="packagesToScan" value="com.angularjsdependencyinjection9_4.dbexportcheck"/>
+        <property name="entityInterceptor" ref="DBExportCheckEntityInterceptor"/>
+        <property name="entityTypeFilters" ref="nonHistoryEntitiesFilter"/>
+        <property name="mappingResources">
+            <list>
+                <value>
+                DBExportCheck-queries.hbm.xml
+                </value>
+            </list>
+        </property>
+
+        <property name="hibernateProperties" ref="DBExportCheckHibernateProperties"/>
+    </bean>
+    <bean id="DBExportCheckTransactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="DBExportCheckSessionFactory"/>
+        <property name="defaultTimeout" value="${DBExportCheck.transactionTimeout}"/>
+    </bean>
+    <bean id="DBExportCheckTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">
+        <property name="sessionFactory" ref="DBExportCheckSessionFactory"/>
+    </bean>
+
+    <bean id="DBExportCheckWMQueryExecutor" class="com.wavemaker.runtime.data.dao.query.WMQueryExecutorImpl">
+        <property name="template" ref="DBExportCheckTemplate"/>
+    </bean>
+    <bean id="DBExportCheckWMProcedureExecutor" class="com.wavemaker.runtime.data.dao.procedure.WMProcedureExecutorImpl">
+        <property name="template" ref="DBExportCheckTemplate"/>
+        <property name="serviceId" value="DBExportCheck"/>
+    </bean>
+
+    <bean id="DBExportCheckHibernateProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="properties">
+            <props>
+                <prop key="hibernate.dialect">
+                ${DBExportCheck.dialect}
+                </prop>
+                <prop key="hibernate.show_sql">
+                    false
+                </prop>
+                <prop key="hibernate.globally_quoted_identifiers">
+                    false
+                </prop>
+                <prop key="hibernate.hbm2ddl.auto">
+                ${DBExportCheck.hbm2ddl}
+                </prop>
+                <prop key="hibernate.temp.use_jdbc_metadata_defaults">
+                    false
+                </prop>
+                <prop key="hibernate.schema_update.unique_constraint_strategy">
+                    skip
+                </prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="DBExportCheckPageableHandlerMethodResolver" class="com.wavemaker.runtime.resolver.WMPageableHandlerMethodArgumentResolver" >
+        <property name="pageParameterName" value="page"/>
+        <property name="sizeParameterName" value="size"/>
+        <property name="oneIndexedParameters" value="true"/>
+        <property name="maxPageSize" value="${DBExportCheck.maxPageSize}"/>
+        <property name="fallbackPageable">
+            <bean  class="org.springframework.data.domain.PageRequest">
+                <constructor-arg  value="0"/>
+                <constructor-arg  value="20"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="DBExportCheckDataSource" class="com.wavemaker.runtime.data.datasource.WMDataSource">
+        <property name="dataSourceType" value="${DBExportCheck.dataSourceType}"/>
+        <property name="jndiName" value="${DBExportCheck.jndiName}"/>
+        <property name="serviceId" value="DBExportCheck"/>
+    </bean>
+
+
+    <tx:annotation-driven/>
+
+</beans>
+

@@ -1,0 +1,130 @@
+{
+  "username" : "postgres",
+  "password" : "7b6a43524a322c0c6e6166771a1378700d662158",
+  "url" : "jdbc:postgresql://3.80.171.45:5432/dbscenarios",
+  "driverClass" : "org.postgresql.Driver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.WMPostgresSQLDialect",
+  "serviceId" : "dbscenarios",
+  "packageName" : "com.angularjsdependencyinjection9_4.dbscenarios",
+  "dbType" : "PostgreSQL",
+  "host" : "3.80.171.45",
+  "dbName" : "dbscenarios",
+  "port" : "5432",
+  "schemaName" : "public",
+  "tableFilter" : [ {
+    "table" : "T_UC_COMPOSITE3",
+    "schema" : "public"
+  }, {
+    "table" : "T-MANY2ONE-P",
+    "schema" : "public"
+  }, {
+    "table" : "Blob Table",
+    "schema" : "public"
+  }, {
+    "table" : "T_UC_ONE2ONE_P",
+    "schema" : "public"
+  }, {
+    "table" : "T_UC_ONE2ONE_C",
+    "schema" : "public"
+  }, {
+    "table" : "T_CR_ONE2ONE2",
+    "schema" : "public"
+  }, {
+    "table" : "SERVER DEFINED",
+    "schema" : "public"
+  }, {
+    "table" : "SP_CHAR IN SEQ",
+    "schema" : "public"
+  }, {
+    "table" : "CHAR COLUMN CHECK-TABLE",
+    "schema" : "public"
+  }, {
+    "table" : "USER TABLE",
+    "schema" : "public"
+  }, {
+    "table" : "ALL EXTERNAL TYPES",
+    "schema" : "public"
+  }, {
+    "table" : "BIGINT SEQUENCE",
+    "schema" : "public"
+  }, {
+    "table" : "ALL TYPES1",
+    "schema" : "public"
+  }, {
+    "table" : "BIT TAble",
+    "schema" : "public"
+  }, {
+    "table" : "VIRTUAL_MANY2ONE1",
+    "schema" : "public"
+  }, {
+    "table" : "VIRTUAL_MANY2ONE",
+    "schema" : "public"
+  }, {
+    "table" : "VIRTUAL_ONE2ONE1",
+    "schema" : "public"
+  }, {
+    "table" : "TABLE448",
+    "schema" : "public"
+  }, {
+    "table" : "VIRTUAL_ONE2ONE",
+    "schema" : "public"
+  }, {
+    "table" : "test1",
+    "schema" : "public"
+  }, {
+    "table" : "T-CR-MANY2ONE4",
+    "schema" : "public"
+  }, {
+    "table" : "T-ONE2ONE-P",
+    "schema" : "public"
+  }, {
+    "table" : "T_CR_ONE2ONE1",
+    "schema" : "public"
+  }, {
+    "table" : "ALL TYPES",
+    "schema" : "public"
+  }, {
+    "table" : "T_CR_MANY2ONE2",
+    "schema" : "public"
+  }, {
+    "table" : "T-ONE2ONE-C",
+    "schema" : "public"
+  }, {
+    "table" : "DEFAULT VALUES",
+    "schema" : "public"
+  }, {
+    "table" : "T_CR_MANY2ONE1",
+    "schema" : "public"
+  }, {
+    "table" : "T_UC_COMPOSTE1",
+    "schema" : "public"
+  }, {
+    "table" : "T-MANY2ONE-C",
+    "schema" : "public"
+  }, {
+    "table" : "BLOB_TABLE",
+    "schema" : "public"
+  }, {
+    "table" : "T_UC_COMPOSITE2",
+    "schema" : "public"
+  }, {
+    "table" : "T-CR-MANY2ONE3",
+    "schema" : "public"
+  } ],
+  "schemaFilter" : [ "public" ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "none",
+  "maxPageSize" : 100,
+  "minPoolSize" : 2,
+  "maxPoolSize" : 4,
+  "transactionTimeout" : 30,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null
+  },
+  "readOnly" : false
+}

@@ -3,8 +3,16 @@
   "type" : "PAGE",
   "params" : [ ]
 }, {
+  "name" : "ArrowFunctions",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "Common",
   "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "CustomDirective",
+  "type" : "PAGE",
   "params" : [ ]
 }, {
   "name" : "Digest",
@@ -12,10 +20,6 @@
   "params" : [ ]
 }, {
   "name" : "Filter",
-  "type" : "PAGE",
-  "params" : [ ]
-}, {
-  "name" : "IsolateScope",
   "type" : "PAGE",
   "params" : [ ]
 }, {
@@ -35,15 +39,15 @@
   "type" : "PAGE",
   "params" : [ ]
 }, {
-  "name" : "RootScope",
+  "name" : "PartialPage",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "SpreadOperator",
   "type" : "PAGE",
   "params" : [ ]
 }, {
-  "name" : "RouteParams",
-  "type" : "PAGE",
-  "params" : [ ]
-}, {
-  "name" : "Watch",
+  "name" : "VariablesPage",
   "type" : "PAGE",
   "params" : [ ]
 }, {

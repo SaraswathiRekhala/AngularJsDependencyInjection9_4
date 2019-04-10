@@ -1,0 +1,208 @@
+{
+  "username" : "root",
+  "password" : "7b6a43524a122c0c6e6166771a13057c4838313a6b124c1a",
+  "url" : "jdbc:mysql://54.200.76.229:3306/dbscenarios?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull",
+  "driverClass" : "com.mysql.jdbc.Driver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
+  "serviceId" : "dbscenarios1",
+  "packageName" : "com.angularjsdependencyinjection9_4.dbscenarios1",
+  "dbType" : "MySQL",
+  "host" : "54.200.76.229",
+  "dbName" : "dbscenarios",
+  "port" : "3306",
+  "schemaName" : null,
+  "tableFilter" : [ {
+    "table" : "account",
+    "schema" : null
+  }, {
+    "table" : "ALL EXTERNAL TYPES",
+    "schema" : null
+  }, {
+    "table" : "ALL TYPES",
+    "schema" : null
+  }, {
+    "table" : "AllTypesWithoutSpace",
+    "schema" : null
+  }, {
+    "table" : "AutoWire_Procedure1000NullTitles",
+    "schema" : null
+  }, {
+    "table" : "bigIntTypes",
+    "schema" : null
+  }, {
+    "table" : "BlobTypeIdentifier",
+    "schema" : null
+  }, {
+    "table" : "BLOBTABLE_PROCEDURE",
+    "schema" : null
+  }, {
+    "table" : "BLOBTYPES",
+    "schema" : null
+  }, {
+    "table" : "BooleanTable",
+    "schema" : null
+  }, {
+    "table" : "CATEGORY",
+    "schema" : null
+  }, {
+    "table" : "CompositePK",
+    "schema" : null
+  }, {
+    "table" : "DatabaseDefinedTable",
+    "schema" : null
+  }, {
+    "table" : "DateDataTypes",
+    "schema" : null
+  }, {
+    "table" : "DATE_TABLE",
+    "schema" : null
+  }, {
+    "table" : "DATETIME_TABLE",
+    "schema" : null
+  }, {
+    "table" : "DATEVERSION",
+    "schema" : null
+  }, {
+    "table" : "DEFAULT VALUES",
+    "schema" : null
+  }, {
+    "table" : "DEPARTMENT",
+    "schema" : null
+  }, {
+    "table" : "INTVERSION",
+    "schema" : null
+  }, {
+    "table" : "new_table$",
+    "schema" : null
+  }, {
+    "table" : "PersonBackup",
+    "schema" : null
+  }, {
+    "table" : "PersonBackup1",
+    "schema" : null
+  }, {
+    "table" : "Persons",
+    "schema" : null
+  }, {
+    "table" : "PRODUCT_TEST",
+    "schema" : null
+  }, {
+    "table" : "RenameTABLE2",
+    "schema" : null
+  }, {
+    "table" : "SampleTable",
+    "schema" : null
+  }, {
+    "table" : "sampleTABLE2",
+    "schema" : null
+  }, {
+    "table" : "SERVERDEF_TABLE",
+    "schema" : null
+  }, {
+    "table" : "SUB_CATEGORY",
+    "schema" : null
+  }, {
+    "table" : "T_COMPOSITES_MANY2ONE",
+    "schema" : null
+  }, {
+    "table" : "T_COMPOSITES_MANY2ONE1",
+    "schema" : null
+  }, {
+    "table" : "T ONE2ONE C",
+    "schema" : null
+  }, {
+    "table" : "T_ONE2ONE_COMPOSITES",
+    "schema" : null
+  }, {
+    "table" : "T_ONE2ONE_COMPOSITES1",
+    "schema" : null
+  }, {
+    "table" : "T ONE2ONE P",
+    "schema" : null
+  }, {
+    "table" : "T UC COMPOSITES1",
+    "schema" : null
+  }, {
+    "table" : "T UC COMPOSITES2",
+    "schema" : null
+  }, {
+    "table" : "T_UC_ONE2ONE CHILD",
+    "schema" : null
+  }, {
+    "table" : "T_UC_ONE2ONE PARENT",
+    "schema" : null
+  }, {
+    "table" : "TABLE10",
+    "schema" : null
+  }, {
+    "table" : "TABLE11",
+    "schema" : null
+  }, {
+    "table" : "TABLE197",
+    "schema" : null
+  }, {
+    "table" : "TABLE2",
+    "schema" : null
+  }, {
+    "table" : "TABLE20",
+    "schema" : null
+  }, {
+    "table" : "TABLE20$",
+    "schema" : null
+  }, {
+    "table" : "TABLE291",
+    "schema" : null
+  }, {
+    "table" : "TABLE2_Editable",
+    "schema" : null
+  }, {
+    "table" : "TABLE8",
+    "schema" : null
+  }, {
+    "table" : "TestXss",
+    "schema" : null
+  }, {
+    "table" : "TIMESTAMP_COL",
+    "schema" : null
+  }, {
+    "table" : "UC",
+    "schema" : null
+  }, {
+    "table" : "UNIQUEGROUPING",
+    "schema" : null
+  }, {
+    "table" : "UP",
+    "schema" : null
+  }, {
+    "table" : "USER_LOGIN",
+    "schema" : null
+  }, {
+    "table" : "ValidatorsTable",
+    "schema" : null
+  }, {
+    "table" : "VIEW_ALLTYPES",
+    "schema" : null
+  }, {
+    "table" : "VIRTUAL_TABLE",
+    "schema" : null
+  }, {
+    "table" : "ZERO_AS_PK",
+    "schema" : null
+  } ],
+  "schemaFilter" : [ ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "none",
+  "maxPageSize" : 100,
+  "minPoolSize" : 2,
+  "maxPoolSize" : 4,
+  "transactionTimeout" : 30,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null
+  },
+  "readOnly" : false
+}
